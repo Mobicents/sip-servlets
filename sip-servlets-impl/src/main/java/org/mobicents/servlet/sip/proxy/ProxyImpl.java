@@ -609,6 +609,13 @@ public class ProxyImpl implements MobicentsProxy, Externalizable {
 	 * @see javax.servlet.sip.Proxy#startProxy()
 	 */
 	public void startProxy() {
+		if(finalBranchForSubsequentRequests != null)
+		{
+			if(logger.isDebugEnabled()) {
+				logger.debug("Looks like proxy is started more than once? finalBranchForSubsequentRequests was " + finalBranchForSubsequentRequests + " but is now being set to null");
+			}
+			finalBranchForSubsequentRequests = null;
+		}
 		if(this.ackReceived) 
 			throw new IllegalStateException("Can't start. ACK has been received.");
 		if(!this.originalRequest.isInitial())

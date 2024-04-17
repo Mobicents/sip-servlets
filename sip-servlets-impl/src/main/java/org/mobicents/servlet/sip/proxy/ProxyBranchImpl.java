@@ -215,7 +215,7 @@ public class ProxyBranchImpl implements MobicentsProxyBranch, Externalizable {
 					if(logger.isDebugEnabled()) {
 						logger.debug("Trying to cancel ProxyBranch for outgoing request " + outgoingRequest);
 					}
-					if(lastResponse.getStatus() > Response.OK && !recursedBranches.isEmpty()) {
+					if(lastResponse.getStatus() > Response.OK && recursedBranches != null && !recursedBranches.isEmpty()) {
 						//  Javadoc says it should throw an java.lang.IllegalStateException if the transaction has already been completed and it has no child branches
 						if(logger.isDebugEnabled()) {
 							logger.debug("lastResponse status for this branch is " + lastResponse.getStatus() + " and it has " + recursedBranches.size() + " to cancel");
