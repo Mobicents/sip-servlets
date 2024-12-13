@@ -48,6 +48,7 @@ import javax.servlet.sip.SipServletListener;
 import javax.servlet.sip.SipServletRequest;
 import javax.servlet.sip.TimerService;
 
+import org.apache.http.MethodNotSupportedException;
 import org.apache.log4j.Logger;
 import org.mobicents.io.undertow.servlet.api.DeploymentInfoFacade;
 import org.mobicents.servlet.sip.SipConnector;
@@ -1202,5 +1203,11 @@ public class SipContextImpl implements SipContext {
 			return true;
 		return false;
 	}
+
+    @Override
+    public void setGracefulInterval(long arg0) {
+        // TODO Auto-generated method stub
+        logger.error(new MethodNotSupportedException("Method setGracefulInterval(long) was not implemented yet"));
+    }
 
 }

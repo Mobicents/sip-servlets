@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.mobicents.servlet.sip</groupId>
+        <artifactId>sip-servlets-bootstrap</artifactId>
+        <version>3.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>assembly-parent</artifactId>
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.mobicents.servlet.sip.docs</groupId>
+                <artifactId>sip-servlets-asciidoc-sources</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>sip-servlets-assembly-tomcat7</module>
+        <module>sip-servlets-assembly-tomcat8</module>
+        <module>sip-servlets-assembly-as7</module>
+        <module>sip-servlets-assembly-wildfly8</module>
+        <module>sip-servlets-assembly-wildfly10</module>
+        <module>sip-servlets-assembly-src</module>
+    </modules>
+    <properties>
+        <assembly.tomcat7.version>7.0.64</assembly.tomcat7.version>
+        <assembly.tomcat8.version>8.0.26</assembly.tomcat8.version>
+        <assembly.jolokia.version>1.1.0</assembly.jolokia.version>
+        <assembly.as7.version>7.2.0.Final</assembly.as7.version>
+        <assembly.mms.version>3.0.0.FINAL</assembly.mms.version>
+        <assembly.wf8.version>8.2.1.Final</assembly.wf8.version>
+        <assembly.wf10.version>10.0.0.Final</assembly.wf10.version>
+        <assembly.activation.version>1.1.1</assembly.activation.version>
+        <assembly.mail.version>1.4</assembly.mail.version>
+        <assembly.stun4j.version>1.0.MOBICENTS</assembly.stun4j.version>
+        <assembly.dnsjava.version>2.1.7</assembly.dnsjava.version>
+        <assembly.commons.codec.version>1.5</assembly.commons.codec.version>
+        <assembly.commons.logging.version>1.0.4</assembly.commons.logging.version>
+        <assembly.log4j.version>1.2.17</assembly.log4j.version>
+    </properties>
+</project>

@@ -1,0 +1,23 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>assembly</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <baseDirectory>sip-servlets-docs-${project.version}</baseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/generated-docs/html-book</directory>
+            <outputDirectory>/html-book</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/generated-docs/html-website</directory>
+            <outputDirectory>/html-website</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/generated-docs/pdf</directory>
+            <outputDirectory>/pdf</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
